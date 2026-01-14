@@ -15,8 +15,8 @@ const container = document.querySelector("#teamList");
 const form = document.querySelector("#downloadForm");
 const messageContainer = document.querySelector("#messageContainer");
 
-const template = await loadTemplate("/templates/teamItem.html");
-const messageTemplate = await loadTemplate("/templates/messageItem.html");
+const template = await loadTemplate("../templates/teamItem.html");
+const messageTemplate = await loadTemplate("../templates/messageItem.html");
 
 const response = await fetch(urls.pdfs);
 const payload = await response.json();
