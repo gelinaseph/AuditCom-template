@@ -1,19 +1,54 @@
 :root {
-  /* TYPOGRAPHIE PRINCIPALE */
-  --typo-title-1-size: 110px;
+    /* TYPOGRAPHIE PRINCIPALE */
+    --typo-title-1-size: 150px;
 
-  /* TITRES SECONDAIRES */
-  --typo-title-2-size: 48px;
-  --typo-title-2-font: 'New Order', sans-serif;
-  --typo-title-2-weight-light: 300;
-  --typo-title-2-weight-bold: 700;
+    /* TITRES SECONDAIRES */
+    --typo-title-2-size: 48px;
+    --typo-title-2-font: 'New Order', sans-serif;
+    --typo-title-2-weight-light: 300;
+    --typo-title-2-weight-bold: 700;
 
-  /* BOUTONS */
-  --typo-button-size: 32px;
+    /* BOUTONS */
+    --typo-button-size: 32px;
 
-  /* STATS */
-  --typo-stats-h1-size: 90px;
-  --typo-stats-h2-size: 35px;
+    /* STATS */
+    --typo-stats-h1-size: 90px;
+    --typo-stats-h2-size: 35px;
 }
 
 
+/* Par défaut (desktop) */
+:root {
+    --font-title: 110px;
+    --font-subtitle: 48px;
+    --button-radius: 30px;
+    --card-radius: 22px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --font-title: 80px;
+        --font-subtitle: 36px;
+        --font-subtitle-light: 36px;
+        --font-button: 28px;
+        --font-stats-h1: 70px;
+        --font-stats-h2: 28px;
+        --radius-button: 24px;
+        --radius-card: 18px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 680px) {
+    :root {
+        --font-title: 48px;
+        --font-subtitle: 24px;
+        --font-subtitle-light: 24px;
+        --font-button: 20px;
+        --font-stats-h1: 48px;
+        --font-stats-h2: 20px;
+        --radius-button: 16px;
+        --radius-card: 12px;
+    }
+}
