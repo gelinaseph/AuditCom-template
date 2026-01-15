@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,96 +9,116 @@
     <script src="src/main.js" type="module" defer></script>
 
 </head>
+
 <body>
 
-    <!-- 🏁 Intro principale -->
+    <!-- Intro principale -->
     <section id="intro">
-      <h1>Ne restez pas sur le banc !</h1>
-      <p>Découvrez comment les clubs suisses marquent des points sur le terrain du numérique.</p>
-      <button>Télécharger le rapport</button>
+        <div class="intro">
+            <h1>Ne restez pas sur le banc !</h1>
+            <p>Découvrez comment les clubs suisses marquent des points sur le terrain du numérique.</p>
+            <button>Télécharger le rapport</button>
+        </div>
     </section>
-  </header>
 
-  <!-- 📊 Statistiques -->
-  <section id="stats">
-    <div class="stat-block">
-          <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count"></h1>
-      <h2>équipes analysées</h2>
-    </div>
-    <div class="stat-grid">
-      <div class="stat-item">
-        <h3>70%</h3>
-        <p>Clubs analysés</p>
-      </div>
-      <div class="stat-item">
-        <h3>180k</h3>
-        <p>Interactions digitales</p>
-      </div>
-      <div class="stat-item">
-        <h3>10+</h3>
-        <p>Écosystèmes digitaux</p>
-      </div>
-    </div>
-  </section>
+    <!-- Statistiques -->
+    <section id="stats">
+        <div class="stat-block">
+            <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+            <h1 data-bind-global="count"></h1>
+            <p>équipes analysées</p>
+            
+        </div>
+    </section>
 
-  <!-- 🧩 Liste des équipes -->
-  <section id="teams">
-    <h2>Clubs analysés</h2>
-    <div class="team-grid">
-      <div class="team-card">Meyrin FC</div>
-      <div class="team-card">Servette FC</div>
-      <!-- etc. -->
-    </div>
-  </section>
 
-  <!-- 📥 Formulaire de téléchargement -->
-  <section id="download">
-    <h2>Téléchargez le rapport</h2>
-    <form>
-      <label for="nom">Nom</label>
-      <input type="text" id="nom" name="nom" />
+        <!--  Liste des équipes -->
+    <!-- Section des clubs analysés -->
+    <section id="teams">
+        <h2>Clubs analysés</h2> <!-- Conteneur avec effet de défilement vertical -->
+        <div class="teams-scroller">
+            <section id="teamList">
+        </div>
+    </section>
 
-      <label for="prenom">Prénom</label>
-      <input type="text" id="prenom" name="prenom" />
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" />
+    <section>
+        <div class="stat-grid">
+            <div class="stat-item">
+                <h3>70%</h3>
+                <p>Clubs analysés</p>
+            </div>
+            <div class="stat-item">
+                <h3>180k</h3>
+                <p>Interactions digitales</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Écosystèmes digitaux</p>
+            </div>
+            <div class="stat-item1 ">
+                <h3>180+</h3>
+                <p>Écosystèmes digitaux</p>
+            </div>
+        </div>
+    </section>
 
-      <label>Newsletter</label>
-      <input type="radio" name="newsletter" value="oui" /> Oui
-      <input type="radio" name="newsletter" value="non" /> Non
 
-      <button type="submit">Télécharger</button>
-    </form>
-  </section>
 
-  <!-- 📎 Footer -->
-  <footer id="footer">
-    <ul>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Mentions légales</a></li>
-      <li><a href="#">Suivez-nous</a></li>
-      <li><a href="#intro">Remonter en haut</a></li>
-    </ul>
-  </footer>
+    <section>
+        <div class="paragraphe">
+
+        </div>
+    </section>
+
+    <!--  Formulaire de téléchargement -->
+    <section id="download">
+        <div>
+            <h2>Téléchargez le rapport</h2>
+        </div>
+        <form>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre email " />
+
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" />
+
+            <div class="newsletter">
+                <label>Newsletter</label>
+                <input type="radio" id="contactChoice1" name="contact" value="email" checked />
+                <label for="contactChoice1">oui</label>
+
+                <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                <label for="contactChoice2">non </label>
+
+            </div>
+
+            <button type="submit">Télécharger</button>
+        </form>
+    </section>
+
+    <!-- 📎 Footer -->
+    <footer id="footer">
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Suivez-nous</a></li>
+            <li><a href="#intro">Remonter en haut</a></li>
+        </ul>
+    </footer>
 </body>
 
 
+<!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
+<div id="messageContainer"></div>
 
-    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count"></h1>
-    
-    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
-    </section>
-
-    <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-    <div id="messageContainer"></div>
-
-    <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-    <form id="downloadForm">
-    </form>
+<!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+<form id="downloadForm">
+</form>
 
 </body>
+
 </html>

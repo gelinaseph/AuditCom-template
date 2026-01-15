@@ -1,0 +1,19 @@
+:root {
+  /* TYPOGRAPHIE PRINCIPALE */
+  --typo-title-1-size: 110px;
+
+  /* TITRES SECONDAIRES */
+  --typo-title-2-size: 48px;
+  --typo-title-2-font: 'New Order', sans-serif;
+  --typo-title-2-weight-light: 300;
+  --typo-title-2-weight-bold: 700;
+
+  /* BOUTONS */
+  --typo-button-size: 32px;
+
+  /* STATS */
+  --typo-stats-h1-size: 90px;
+  --typo-stats-h2-size: 35px;
+}
+
+
