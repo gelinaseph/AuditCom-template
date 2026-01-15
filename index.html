@@ -17,7 +17,10 @@
         <div class="intro">
             <h1>Ne restez pas sur le banc !</h1>
             <p>Découvrez comment les clubs suisses <br> marquent des points sur le terrain du numérique.</p>
-            <button>Télécharger le rapport</button>
+            <a href="#footer">
+                <button> Télécharger le rapport</button>
+            </a>
+
         </div>
     </section>
 
@@ -79,54 +82,74 @@
     </section>
 
     <!--  Formulaire de téléchargement -->
-    <section id="download">
-        <div class="cover">
-            <h2>Téléchargez le rapport</h2>
-            <img src="image/270.jpg" alt="">
+    <!-- <section id="download">
+        <div class="Formulaire">
+            <form>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre email " />
+
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" />
+
+                    <div class="newsletter">
+                        <input type="checkbox" id="contactChoice1" name="contact" value="email" checked />
+                        <label>j'accepte de recevoir une newsletter</label>
+                    </div>
+
+                    <button type="submit">Télécharger</button>
+                </form>
         </div>
-        <form>
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Votre email " />
 
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" />
+    </section> -->
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" />
-
-            <div class="newsletter">
-                <label>Newsletter</label>
-                <input type="radio" id="contactChoice1" name="contact" value="email" checked />
-                <label for="contactChoice1">oui</label>
-
-                <input type="radio" id="contactChoice2" name="contact" value="phone" />
-                <label for="contactChoice2">non </label>
-
+    <section id="download">
+        <div class="Formulaire">
+            <!-- Conteneur pour les messages -->
+            <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
+            <div id="messageContainer" class="message" style="display: none;">
+                <p id="messageText"></p>
+                <div class="progress-container" style="display: none;"> <progress id="progressBar" class="progress-bar"
+                        max="100" value="0"></progress> <span id="progressText" class="progress-text">0%</span> </div>
             </div>
+            <!-- Formulaire -->
 
-            <button type="submit">Télécharger</button>
-        </form>
+             <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+            <form id="downloadForm">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required />
+
+                <div class="newsletter">
+                    <input type="checkbox" id="contactChoice1" name="contact" value="email" checked />
+                    <label for="contactChoice1">J'accepte de recevoir une newsletter</label>
+                </div>
+
+                <button type="submit">Télécharger</button>
+            </form>
+        </div>
     </section>
+
 
     <!-- Footer -->
     <footer id="footer">
         <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Suivez-nous</a></li>
+            <li><a href="#intro">GitHub Repo</a></li>
+            <li><a href="#intro">Rapport d'analyse - Footbal suisse romand</a></li>
+            <li><a href="#intro">SAE - HEIG-VD 2026</a></li>
             <li><a href="#intro">Remonter en haut</a></li>
         </ul>
     </footer>
 </body>
 
-
-<!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-<div id="messageContainer"></div>
-
-<!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-<form id="downloadForm">
 </form>
 
-
-
 </html>
+

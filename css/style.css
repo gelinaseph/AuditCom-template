@@ -1,8 +1,6 @@
 @import "reset.css";
 @import "typofgraphie.css";
-@import "responsive.css";
-
-
+@import "form_message.css";
 
 * {
     box-sizing: border-box;
@@ -11,15 +9,18 @@
 }
 
 @font-face {
-    font-family: ' New Order Semibold';
+    font-family: 'New Order Semibold';
     src: url('https://fonnts.com/new-nord/');
 }
 
+html,
 body {
     font-family: 'New Order Semibold';
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #EDF1F4;
     color: #222;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 img {
@@ -30,72 +31,69 @@ img {
 
 h1 {
     font-size: var(--font-title);
-    font-size: var(--typo-title-1-size);
     text-align: center;
-    font-size: var(--font-title);
 }
 
 h3 {
-    font-size: var(--typo-title-1-size);
+    font-size: var(--font-subtitle);
     color: #023347;
 }
 
-
 p {
-    font-size: var(--typo-title-2-size);
-    font-family: var(--typo-title-2-font);
     font-size: var(--font-subtitle);
+    font-family: var(--typo-title-2-font);
     text-align: center;
 }
 
+.cover,
+form,
+#teams {
+    width: 100%;
+    max-width: 1000px;
 
+}
+#teams{
+    text-align: center;
+}
 
-
-/* SECTION INTRO  */
+/* SECTION INTRO */
 #intro {
-    /* position: relative; */
+    min-height: 600px;
     display: flex;
     justify-content: flex-start;
-    /* aligne le contenu à gauche */
     align-items: center;
-    /* centre verticalement */
     height: 100vh;
     background: url(/template/AuditCom-template/image/107.jpg) center/cover no-repeat;
     color: white;
-
-    /* aligne le texte à gauche */
     padding: 2rem 4rem;
 }
 
 .intro h1 {
-    font-size: var(--typo-title-1-size);
+    font-size: var(--font-title);
     margin-bottom: 1rem;
     text-align: left;
 }
 
 .intro p {
-    font-size: var(--typo-title-2-size);
-    font-family: var(--typo-title-2-font);
+    font-size: var(--font-subtitle);
     margin-bottom: 2rem;
     text-align: left;
 }
 
-
 .intro button {
-    width: 300px;
+    max-width: 500px;
     color: #fff;
     margin-top: 2rem;
     padding: 1rem 2rem;
-    font-size: 1.2rem;
+    font-size: var(--font-button);
     background-color: #030303;
-    border-radius: 30px;
+    border-radius: var(--radius-button);
     cursor: pointer;
 }
 
 .intro button:hover {
     color: #030303;
     background-color: #fff;
-    cursor: pointer;
 }
 
 /* SECTION STATS */
@@ -105,80 +103,65 @@ p {
 }
 
 .stat-block {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* centre verticalement */
     align-items: flex-end;
-    /* aligne à gauche */
     height: 70vh;
     background: url(/template/AuditCom-template/image/190.jpg) center/cover no-repeat;
     color: white;
-    padding: 10rem;
+    padding: 4rem;
     margin-bottom: 1rem;
-    border-radius: 21px
+    border-radius: var(--radius-card);
 }
 
 .stat-grid {
-    /* background-image:  ; */
     display: grid;
     grid-template-columns: repeat(3, minmax(150px, 1fr));
-    /* nombre de colonnes */
-    grid-template-rows: repeat(2, 1fr);
-    /* nombre de lignes */
-    gap: 3rem;
-
-    justify-content: center;
-    margin: 5rem 5rem;
-
-}
-
-/* grid stat */
-
-.stat-grid {
+    gap: 1rem;
+    align-items: normal;
+    justify-items: normal;
+    margin: 2rem;
     margin-bottom: 1rem;
-
 }
 
-/* grid stats */
 .stat-item {
-    background-color: #CFE7ED;
-    padding: 3rem;
-    border-radius: 8px;
-    text-align: center;
+    height: 100%;
+    max-height: 300px;
+    padding-top: 3rem;
+    gap: 1rem;
 }
 
-
+.stat-item,
 .stat-item1 {
     background-color: #CFE7ED;
-    padding: 3rem;
-    border-radius: 8px;
+    border-radius: var(--radius-card);
     text-align: center;
+}
+
+.stat-item1 {
     grid-column: span 3;
     display: flex;
-    gap: 5rem;
-    /* justify-content: center; */
-    align-items: center
+    padding: 3rem;
+    gap: 3rem;
+    align-items: center;
 }
 
-.stats {
-    flex-grow: 1;
+.stat-item1 img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
 }
 
+.stats,
 .image {
     flex-grow: 1;
 }
 
-.stat-item1 img {
-    width: 500px;
-    border-radius: 12px;
-}
-
-
-/*  SECTION ÉQUIPES  */
+/* SECTION ÉQUIPES */
 #teams {
-    padding: 3rem 2rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
 }
 
 .team-grid {
@@ -196,52 +179,21 @@ p {
     font-weight: bold;
 }
 
-
-/* Section globale */
-#teams {
-    width: 1000px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-
-
-}
-
-/* Conteneur avec fenêtre de défilement */
-
 .teams-scroller {
     position: relative;
     height: 600px;
-    /* hauteur visible (à ajuster) */
     overflow: hidden;
-    /* masque ce qui dépasse pour l’effet de défilement */
-
-
 }
 
-/* Logo */
-.team-logo {
-    width: 20px;
-    height: 20px;
-    /* border-radius: 10px; */
-    object-fit: cover;
-    /* background: #e5e5e5; */
-}
-
-/* Liste des équipes (colonne) */
 #teamList {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     animation: scrollTeams 30s linear infinite;
-    /* centrer vertical */
     align-items: center;
-    /* centrer horizontal */
     justify-content: center;
-
 }
 
-
-/* Animation de défilement vertical */
 @keyframes scrollTeams {
     0% {
         transform: translateY(0);
@@ -249,86 +201,78 @@ p {
 
     100% {
         transform: translateY(-50%);
-        /* à ajuster selon le nombre d’items */
     }
 }
 
-/* Pause au survol (optionnel mais agréable) */
 .teams-scroller:hover #teamList {
     animation-play-state: paused;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    #teams {
-        padding: 2rem 1rem;
-    }
-
-    .team-card {
-        padding: 0.85rem 1rem;
-    }
-
-    .team-name {
-        font-size: 0.95rem;
-    }
-
-    .team-subtitle {
-        font-size: 0.8rem;
-    }
-}
-
-#p {
-    /* display: flex; */
-    height: 70vh;
-    padding: 3rem 3rem;
-    text-align: center;
+.team-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
 }
 
 
-/*  SECTION FORMULAIRE  */
+
+.paragraphe {
+    display: flex;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: #fff;
+    height: 300px;
+
+}
+
+.paragraphe p {
+    align-items: center;
+}
+
+/* SECTION FORMULAIRE */
 #download {
     display: flex;
     padding: 4rem 2rem;
     background-color: #2A8E9E;
     gap: 1rem;
-
 }
 
+.Formulaire {
+    background-color: #030303;
+    padding: 5rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    gap: 1rem;
+    border-radius: 14px;
+}
+
+.cover {
+    position: relative;
+    width: 100%;
+    max-width: 502px;
+    height: 600px;
+    background: #CFE7ED;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+}
 
 .cover h2 {
     position: absolute;
     top: 80%;
     left: 20%;
     color: #fff;
-
-}
-
-.cover {
-    position: relative;
-    width: 520px;
-    height: 600px;
-    background: #CFE7ED;
-    border-radius: 22px;
-    overflow: hidden;
-    /* empêche le débordement si l’image dépasse */
-}
-
-.cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* garde le cadrage sans déformation */
-    object-position: center;
-    /* centre l’image dans le bloc */
-    border-radius: 22px;
 }
 
 form {
+    opacity: 100%;
     margin: 0 auto;
-    width: 700px;
+    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    color: #fff;
 }
 
 input[type="text"],
@@ -338,22 +282,24 @@ input[type="email"] {
     border-radius: 6px;
 }
 
-.Newsletter {
-    margin-right: 0.5rem;
+.newsletter {
+    padding: 1rem;
 }
 
 button[type="submit"] {
-    width: 300px;
-    color: #fff;
+    width: 100%;
+    max-width: 300px;
+    height: 80px;
+    color: #000000;
     padding: 1rem 2rem;
-    font-size: 1.2rem;
-    background-color: #030303;
-    border-radius: 8px;
+    font-size: var(--font-button);
+    background-color: #ffffff;
+    border-radius: var(--radius-button);
     cursor: pointer;
     justify-content: center;
 }
 
-/*  FOOTER */
+/* FOOTER */
 footer {
     background-color: #222;
     color: white;
@@ -374,3 +320,14 @@ footer a {
     text-decoration: none;
 }
 
+@media screen and (max-width: 480px) {
+    /* ... styles pour mobile ... */
+}
+
+@media screen and (max-width: 1024px) {
+    /* ... styles pour tablette ... */
+}
+
+@media screen and (min-width: 1025px) {
+    /* ... styles pour desktop ... */
+}
