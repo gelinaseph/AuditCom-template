@@ -9,6 +9,82 @@
 
 </head>
 <body>
+
+    <!-- 🏁 Intro principale -->
+    <section id="intro">
+      <h1>Ne restez pas sur le banc !</h1>
+      <p>Découvrez comment les clubs suisses marquent des points sur le terrain du numérique.</p>
+      <button>Télécharger le rapport</button>
+    </section>
+  </header>
+
+  <!-- 📊 Statistiques -->
+  <section id="stats">
+    <div class="stat-block">
+          <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+    <h1 data-bind-global="count"></h1>
+      <h2>équipes analysées</h2>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-item">
+        <h3>70%</h3>
+        <p>Clubs analysés</p>
+      </div>
+      <div class="stat-item">
+        <h3>180k</h3>
+        <p>Interactions digitales</p>
+      </div>
+      <div class="stat-item">
+        <h3>10+</h3>
+        <p>Écosystèmes digitaux</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧩 Liste des équipes -->
+  <section id="teams">
+    <h2>Clubs analysés</h2>
+    <div class="team-grid">
+      <div class="team-card">Meyrin FC</div>
+      <div class="team-card">Servette FC</div>
+      <!-- etc. -->
+    </div>
+  </section>
+
+  <!-- 📥 Formulaire de téléchargement -->
+  <section id="download">
+    <h2>Téléchargez le rapport</h2>
+    <form>
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" />
+
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" />
+
+      <label>Newsletter</label>
+      <input type="radio" name="newsletter" value="oui" /> Oui
+      <input type="radio" name="newsletter" value="non" /> Non
+
+      <button type="submit">Télécharger</button>
+    </form>
+  </section>
+
+  <!-- 📎 Footer -->
+  <footer id="footer">
+    <ul>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Suivez-nous</a></li>
+      <li><a href="#intro">Remonter en haut</a></li>
+    </ul>
+  </footer>
+</body>
+
+
+
     <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
     <h1 data-bind-global="count"></h1>
     
