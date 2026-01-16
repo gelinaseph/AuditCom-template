@@ -177,7 +177,7 @@ python3 -m http.server 8000
 ```
 Puis ouvrez `http://localhost:8000`
 
-**Option 3 : Node.js**
+**Option 3 : Node.js i hope it works** 
 ```bash
 npx serve -p 8000
 ```
