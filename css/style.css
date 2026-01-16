@@ -64,7 +64,7 @@ form,
     justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    background: url(/template/AuditCom-template/image/107.jpg )  center/cover no-repeat;
+    background: url(/template/AuditCom-template/image/107.jpg ) center/cover no-repeat;
     color: white;
     padding: 2rem 4rem;
 }
@@ -232,18 +232,22 @@ form,
 
 .paragraphe {
     display: flex;
-    padding: 5rem 5rem;
+    padding: 2rem 2rem;
     background-color: #fff;
     max-height: 400px;
 }
 
 #p {
     margin: 2rem 0;
+
 }
 
 .paragraphe p {
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
+    /* justify-content: center; */
+    /* max-width: 90%; */
+    padding: 2rem ;
 }
 
 /* SECTION FORMULAIRE */
@@ -313,6 +317,9 @@ button[type="submit"] {
     border-radius: 22px;
     cursor: pointer;
 }
+
+
+
 
 
 
