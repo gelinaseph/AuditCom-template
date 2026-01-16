@@ -35,7 +35,7 @@ h1 {
 }
 
 h3 {
-    font-size: var(--font-subtitle);
+    font-size: var(--font-title);
     color: #023347;
 }
 
@@ -127,8 +127,8 @@ form,
 
 .stat-item {
     height: 100%;
-    max-height: 300px;
-    padding-top: 3rem;
+    max-height: 800px;
+    padding: 3rem 0;
     gap: 1rem;
 }
 
