@@ -4,8 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Innovations Rapport d'analyse| Football suisse romand | AuditCom</title>
+    <meta name="description" content="Découvrez comment les clubs suisses marquent des points sur le terrain du numérique. Rapport exclusif et gratuit sur l'écosystème digital du football suisse.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://auditcom.onrender.com/">
+    <meta property="og:title" content="Sport Innovations - Football suisse romand | AuditCom">
+    <meta property="og:description" content="Découvrez comment les clubs suisses marquent des points sur le terrain du numérique. Rapport exclusif et gratuit sur l'écosystème digital du football suisse.">
+    <meta property="og:image" content="https://auditcom.onrender.com/image/107.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://auditcom.onrender.com/">
+    <meta name="twitter:title" content="Rapport d'analyse - Football suisse romand | AuditCom">
+    <meta name="twitter:description" content="Découvrez comment les clubs suisses marquent des points sur le terrain du numérique. Rapport exclusif et gratuit sur l'écosystème digital du football suisse.">
+    <meta name="twitter:image" content="https://auditcom.onrender.com/image/107.jpg">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/reset.css">
+
     <script src="src/main.js" type="module" defer></script>
 
 </head>
@@ -93,25 +115,29 @@
         <div class="Formulaire">
             <!-- Conteneur pour les messages -->
             <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
+<<<<<<< HEAD
             <div id="messageContainer" class="message" >
                 <p id="messageText"></p>
             </div>
 
+=======
+            <div id="messageContainer"></div>
+>>>>>>> bf66dd2e5637d4da64fc3995abb955c1637d738b
             <!-- Formulaire -->
 
             <form id="downloadForm">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+                <label for="lastName">Nom</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Votre nom" required />
 
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+                <label for="firstName">Prénom</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Votre prénom" required />
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Votre email" required />
 
                 <div class="newsletter">
-                    <input type="checkbox" id="contactChoice1" name="contact" value="email" checked />
-                    <label for="contactChoice1">J'accepte de recevoir une newsletter</label>
+                    <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement" checked />
+                    <label for="newsletterAgreement">J'accepte de recevoir une newsletter</label>
                 </div>
 
                 <button type="submit">Télécharger le rapport</button>
