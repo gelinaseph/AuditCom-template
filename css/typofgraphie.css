@@ -1,7 +1,7 @@
 :root {
   /* TYPOGRAPHIE PRINCIPALE */
   --typo-title-1-size: 150px;
-  --typo-title-2-size: 48px;
+  --typo-title-2-size: 38px;
   --typo-title-2-font: 'New Order', sans-serif;
   --typo-title-2-weight-light: 300;
   --typo-title-2-weight-bold: 700;
@@ -19,6 +19,7 @@
   --font-button: var(--typo-button-size);
   --font-stats-h1: var(--typo-stats-h1-size);
   --font-stats-h2: var(--typo-stats-h2-size);
+  --font-bold: var(--typo-title-2-weight-bold);
   --radius-button: 59px;
   --radius-card: 22px;
 }

@@ -37,32 +37,37 @@
 
     <!--  Liste des équipes -->
     <!-- Section des clubs analysés -->
-    <div class="teams-scroller">
     <section id="teams">
         <h2>Clubs analysés</h2> <!-- Conteneur avec effet de défilement vertical -->
-            <section id="teamList">
+        <div class="teams-scroller"> <!-- IMPORTANT : on garde cet ID, c’est ici que ton JS injecte les équipes -->
+            <section id="teamList"> <!-- Les <article class="team-card"> seront ajoutés ici dynamiquement --> </section>
         </div>
     </section>
+
 
 
     <section>
         <div class="stat-grid">
             <div class="stat-item">
                 <h3>70%</h3>
-                <p>Clubs analysés</p>
+                <p>Le pourcentage de visites sur mobile,
+                    le Lancy FC adopte la stratégie "mobile-first"</p>
             </div>
             <div class="stat-item">
-                <h3>180k</h3>
-                <p>Interactions digitales</p>
+                <h3>400</h3>
+                <p>Le nombre de jeunes joueurs formés au
+                    FC Grand-Saconnex.</p>
             </div>
             <div class="stat-item">
-                <h3>10+</h3>
-                <p>Écosystèmes digitaux</p>
+                <h3>6'000</h3>
+                <p>Vues l’audience record atteinte par les clubs
+                    de ligues inférieures grâce aux Reels.</p>
             </div>
             <div class="stat-item1 ">
                 <div class="stats">
-                    <h3>180+</h3>
-                    <p>Écosystèmes digitaux</p>
+                    <h3> Score C</h3>
+                    <p>La note du FC Monthey et de beaucoup des
+                        clubs dans l’éco-conception de leur site web</p>
                 </div>
                 <div class="image">
                     <img src="image/stats.png" alt="">
@@ -75,35 +80,14 @@
 
     <section id="p">
         <div class="paragraphe">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit fugit esse eius pariatur quas id
-                cupiditate odit. Voluptas, consequuntur vel delectus repellat sint aspernatur soluta laborum laboriosam
-                eaque rem cum.</p>
+            <p>Plongez au cœur des écosystèmes digitaux du football suisse à travers un rapport <strong> exclusif et totalement
+                gratuit.</strong>  De la Super League aux ligues régionales, cet audit <strong>fraîchement publié en 2026 </strong> passe au crible
+                <strong>28 clubs</strong> emblématiques de Suisse romande pour comprendre comment le ballon rond négocie son virage
+                numérique.</p>
         </div>
     </section>
 
-    <!--  Formulaire de téléchargement -->
-    <!-- <section id="download">
-        <div class="Formulaire">
-            <form>
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="Votre email " />
 
-                    <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" />
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Votre email" />
-
-                    <div class="newsletter">
-                        <input type="checkbox" id="contactChoice1" name="contact" value="email" checked />
-                        <label>j'accepte de recevoir une newsletter</label>
-                    </div>
-
-                    <button type="submit">Télécharger</button>
-                </form>
-        </div>
-
-    </section> -->
 
     <section id="download">
         <div class="Formulaire">
@@ -116,7 +100,7 @@
             </div>
             <!-- Formulaire -->
 
-             <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+            <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
             <form id="downloadForm">
                 <label for="nom">Nom</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
@@ -132,7 +116,7 @@
                     <label for="contactChoice1">J'accepte de recevoir une newsletter</label>
                 </div>
 
-                <button type="submit">Télécharger</button>
+                <button type="submit">Télécharger le rapport</button>
             </form>
         </div>
     </section>
@@ -150,5 +134,3 @@
 </body>
 
 </html>
-
-
